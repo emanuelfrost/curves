@@ -60,8 +60,8 @@ void ofApp::update(){
 
             //ofLog(OF_LOG_NOTICE, "p1: " + ofToString(current.p) + " p2: " + ofToString(next.p));
 
-            float w1 = bezz.getLineWidth(current.p, minWidth, baseWidth, widthSmoothing);
-            float w2 = bezz.getLineWidth(next.p, minWidth, baseWidth, widthSmoothing);
+            float w1 = bezz.getLineWidth(current.p, 1.0, minWidth, baseWidth, widthSmoothing);
+            float w2 = bezz.getLineWidth(next.p, 1.0, minWidth, baseWidth, widthSmoothing);
 
             Bezier bezierTemp = bezz.buildSegmentBezier(totalNoOfSegments, index, current, w1, next, w2);
             beziers.push_back(bezierTemp);
@@ -124,7 +124,7 @@ void ofApp::draw(){
     for (vector< vector<BezierPoint> >::iterator segment = segmentBezierPoints.begin(); segment != segmentBezierPoints.end(); ++segment ) { 
         for (vector<BezierPoint>::iterator points = segment->begin(); points != segment->end(); points++) {
             BezierPoint& b = *points;
-            float w = bezz.getLineWidth(b.p, minWidth, baseWidth, widthSmoothing);
+            float w = bezz.getLineWidth(b.p, 1.0, minWidth, baseWidth, widthSmoothing);
             ofDrawCircle(b.pos, w);
 
         }
