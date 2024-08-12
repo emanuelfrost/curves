@@ -94,7 +94,10 @@
 			"numeric": "cpp",
 			"random": "cpp",
 			"ranges": "cpp",
-			"algorithm": "cpp"
+			"algorithm": "cpp",
+			"charconv": "cpp",
+			"future": "cpp",
+			"typeindex": "cpp"
 		}
 	}
 }

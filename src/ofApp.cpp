@@ -22,6 +22,7 @@ void ofApp::setup(){
     gui.add(widthSmoothing.setup("Width curve smoothing", 0.0, 0.0, 1.0));
     
     gui.add(debug.setup("debug", true));
+
 }
 
 //--------------------------------------------------------------

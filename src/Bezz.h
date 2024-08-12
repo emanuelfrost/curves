@@ -1,5 +1,7 @@
 #include "ofMain.h"
 
+//https://en.cppreference.com/w/cpp/language/enum
+enum Tween { linear, cubic, expo, sine };
 
 class Line {
 public:
@@ -67,5 +69,6 @@ public:
     ofPath buildClosedPath(const ofPolyline& polyLine, ofColor color);
     bool isPolylineIntersecting(const ofPolyline& a, const ofPolyline& b);
     float getLineWidth(float p, float widthAlgorithm, float minWidth, float baseWidth, float widthSmoothing);
-    
+    Tween getTween(float algorithm);
+    string getTweenName(Tween tween);
 };

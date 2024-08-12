@@ -54,4 +54,5 @@ class ofApp : public ofBaseApp{
 		ofRectangle drawingArea;
 		ofRectangle drawingAreaWidthAdjusted;
 		Bezz bezz;
+		
 };

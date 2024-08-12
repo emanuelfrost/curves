@@ -104,7 +104,24 @@ double Bezz::getBezierAngleInRadians(double t, double sx, double sy, double cp1x
 // }
 
 
+Tween Bezz::getTween(float algorithm){
+    int no = static_cast<int>(algorithm);
+    Tween tween = static_cast<Tween>(no);
+    return tween;
+}
 
+
+string Bezz::getTweenName(Tween tween){
+    switch(tween)
+    {
+        case linear : return "Linear";
+        case cubic: return "Cubic";
+        case expo : return "Expo";
+        case sine : return "Sine";
+    }
+
+    throw std::invalid_argument( "Not a valid tween" );
+}
 
 
 
